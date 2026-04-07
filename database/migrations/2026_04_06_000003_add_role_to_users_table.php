@@ -9,6 +9,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
+            if (!Schema::hasColumn('users', 'role')) {
+                $table->string('role')->default('user')->after('password');
+            }
+        });
+
+        Schema::table('users', function (Blueprint $table) {
             if (!Schema::hasColumn('users', 'hospital_id')) {
                 $table->foreignId('hospital_id')->nullable()->after('role')->constrained()->nullOnDelete();
             }
@@ -21,6 +27,9 @@ return new class extends Migration
             if (Schema::hasColumn('users', 'hospital_id')) {
                 $table->dropForeign(['hospital_id']);
                 $table->dropColumn('hospital_id');
+            }
+            if (Schema::hasColumn('users', 'role')) {
+                $table->dropColumn('role');
             }
         });
     }
