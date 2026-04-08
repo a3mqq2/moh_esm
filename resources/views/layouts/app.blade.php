@@ -208,7 +208,7 @@
                     <div class="container-fluid text-center">
                         <i class="ti ti-code app-footer-icon"></i>
                         <span>تنفيذ</span>
-                        <span class="app-footer-bold">قسم تقنية المعلومات الصحية</span>
+                        <span class="app-footer-bold">مكتب تقنية المعلومات الصحية</span>
                         <span class="app-footer-sep">|</span>
                         <span class="app-footer-bold">وزارة الصحة الليبية</span>
                     </div>

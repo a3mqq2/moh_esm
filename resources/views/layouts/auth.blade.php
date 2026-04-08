@@ -182,12 +182,15 @@
 
                                         @yield('content')
 
-                                        <p class="text-center text-muted mt-4 mb-0">
+                                        <p class="text-center text-muted mt-4 mb-1">
                                             ©
                                             <script>
                                                 document.write(new Date().getFullYear())
                                             </script>
                                             <span class="fw-bold">وزارة الصحة الليبية</span>
+                                        </p>
+                                        <p class="text-center text-muted mb-0 fs-13">
+                                            تطوير <span class="fw-bold">مكتب تقنية المعلومات الصحية</span>
                                         </p>
                                     </div>
                                 </div>
